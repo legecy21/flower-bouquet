@@ -58,6 +58,8 @@ body {
 }
 
 .flower--1 {
+  left: 2%;
+  bottom: 5vmin;
   animation: moving-flower-1 4s linear infinite;
 }
 
@@ -91,8 +93,9 @@ body {
 }
 
 .flower--2 {
-  left: 50%;
-  transform: rotate(20deg);
+  left: 16%;
+  bottom: 15vmin;
+  transform: rotate(15deg);
   animation: moving-flower-2 4s linear infinite;
 }
 
@@ -118,12 +121,14 @@ body {
 }
 
 .flower--3 {
-  left: 50%;
-  transform: rotate(-15deg);
+  left: 30%;
+  bottom: 8vmin;
+  transform: rotate(-10deg);
   animation: moving-flower-3 4s linear infinite;
 }
 
 .flower--3 .flower__line {
+  height: 68vmin;
   animation-delay: 0.9s;
 }
 
@@ -168,7 +173,7 @@ body {
   transform: translate(-50%, -100%);
   width: 8vmin;
   height: 8vmin;
-  background-color: #fff;
+  background-color: #1aaa15;
   filter: blur(10vmin);
 }
 
@@ -253,7 +258,7 @@ body {
   height: var(--h);
   border-top-right-radius: var(--h);
   border-bottom-left-radius: var(--h);
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.4), #fff);
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.4), #1aaa15);
 }
 
 .flower__line__leaf--1 {
@@ -1214,3 +1219,89 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.flower--4 {
+  left: 44%;
+  bottom: 12vmin;
+  transform: rotate(8deg);
+  animation: moving-flower-4 4s linear infinite;
+}
+
+.flower--4 .flower__line {
+  height: 60vmin;
+  animation-delay: 0.8s;
+}
+
+.flower--5 {
+  left: 58%;
+  bottom: 3vmin;
+  transform: rotate(-12deg);
+  animation: moving-flower-5 4s linear infinite;
+}
+
+.flower--5 .flower__line {
+  height: 70vmin;
+  animation-delay: 1s;
+}
+
+@keyframes moving-flower-4 {
+  0%, 100% {
+    transform: rotate(8deg);
+  }
+  50% {
+    transform: rotate(6deg) rotateY(8deg);
+  }
+}
+
+@keyframes moving-flower-5 {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(-12deg) rotateY(-8deg);
+  }
+}
+
+/* Add new flowers */
+.flower--6 {
+  left: 72%;
+  bottom: 15vmin;
+  transform: rotate(10deg);
+  animation: moving-flower-6 4s linear infinite;
+}
+
+.flower--6 .flower__line {
+  height: 50vmin;
+  animation-delay: 1.2s;
+}
+
+.flower--7 {
+  left: 88%;
+  bottom: 10vmin;
+  transform: rotate(-8deg);
+  animation: moving-flower-7 4s linear infinite;
+}
+
+.flower--7 .flower__line {
+  height: 60vmin;
+  animation-delay: 1.4s;
+}
+
+/* Add animations for new flowers */
+@keyframes moving-flower-6 {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg) rotateY(2deg);
+  }
+}
+
+@keyframes moving-flower-7 {
+  0%, 100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(-10deg) rotateY(-8deg);
+  }
+}
