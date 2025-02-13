@@ -312,6 +312,110 @@
         <div class="leaf leaf--3"></div>
       </div>
     </div>
+
+    <!-- Add flower 4 -->
+    <div class="flower flower--4">
+      <div class="flower__leafs flower__leafs--4">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
+
+    <!-- Add flower 5 -->
+    <div class="flower flower--5">
+      <div class="flower__leafs flower__leafs--5">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
+
+    <!-- Add flower 6 -->
+    <div class="flower flower--6">
+      <div class="flower__leafs flower__leafs--6">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
+
+    <!-- Add flower 7 -->
+    <div class="flower flower--7">
+      <div class="flower__leafs flower__leafs--7">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
   </div>
 
   <!-- Title -->
@@ -348,6 +452,10 @@
         leaf.style.backgroundColor = '#1aaa15';
         leaf.style.backgroundImage = 'linear-gradient(to top, rgba(255, 255, 255, 0.4), #1aaa15)';
     });
+    document.querySelectorAll('.flower__grass').forEach(leaf => {
+        leaf.style.backgroundColor = '#1aaa15';
+        leaf.style.backgroundImage = 'linear-gradient(to top, rgba(255, 255, 255, 0.4), #1aaa15)';
+    });
 
     flowersContainer.addEventListener('click', () => {
         currentColorIndex = (currentColorIndex + 1) % colors.length;
@@ -358,12 +466,24 @@
             .flower--1 .flower__leaf,
             .flower--2 .flower__leaf,
             .flower--3 .flower__leaf,
+            .flower--4 .flower__leaf,
+            .flower--5 .flower__leaf,
+            .flower--6 .flower__leaf,
+            .flower--7 .flower__leaf,
             .flower--1 .flower__light,
             .flower--2 .flower__light,
             .flower--3 .flower__light,
+            .flower--4 .flower__light,
+            .flower--5 .flower__light,
+            .flower--6 .flower__light,
+            .flower--7 .flower__light,
             .flower--1 .flower__white-circle,
             .flower--2 .flower__white-circle,
-            .flower--3 .flower__white-circle
+            .flower--3 .flower__white-circle,
+            .flower--4 .flower__white-circle,
+            .flower--5 .flower__white-circle,
+            .flower--6 .flower__white-circle,
+            .flower--7 .flower__white-circle
         `);
         
         elements.forEach(element => {
