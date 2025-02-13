@@ -339,23 +339,39 @@
     
     let currentColorIndex = 0;
 
+    // Set the initial dark green color for stem leaves
+    document.querySelectorAll('.flower__line__leaf').forEach(leaf => {
+        leaf.style.backgroundColor = '#1aaa15';
+        leaf.style.backgroundImage = 'linear-gradient(to top, rgba(255, 255, 255, 0.4), #1aaa15)';
+    });
+    document.querySelectorAll('.flower__line').forEach(leaf => {
+        leaf.style.backgroundColor = '#1aaa15';
+        leaf.style.backgroundImage = 'linear-gradient(to top, rgba(255, 255, 255, 0.4), #1aaa15)';
+    });
+
     flowersContainer.addEventListener('click', () => {
         currentColorIndex = (currentColorIndex + 1) % colors.length;
         const newColor = colors[currentColorIndex];
         
-        // Select ALL leaf elements
-        const allLeaves = document.querySelectorAll('.flower__leaf, .flower__g-front__leaf, .flower__g-fr__leaf, .leaf, .flower__grass--top, .flower__grass--bottom');
-        allLeaves.forEach(leaf => {
-            leaf.style.backgroundColor = newColor;
-            leaf.style.borderColor = newColor;
-            leaf.style.transition = 'all 0.5s ease';
-        });
+        // Select ONLY flower petals and lights across all flowers
+        const elements = document.querySelectorAll(`
+            .flower--1 .flower__leaf,
+            .flower--2 .flower__leaf,
+            .flower--3 .flower__leaf,
+            .flower--1 .flower__light,
+            .flower--2 .flower__light,
+            .flower--3 .flower__light,
+            .flower--1 .flower__white-circle,
+            .flower--2 .flower__white-circle,
+            .flower--3 .flower__white-circle
+        `);
         
-        // Change the color of flower lights
-        const flowerLights = document.querySelectorAll('.flower__light');
-        flowerLights.forEach(light => {
-            light.style.backgroundColor = newColor;
-            light.style.transition = 'background-color 0.5s ease';
+        elements.forEach(element => {
+            element.style.backgroundColor = newColor;
+            if (element.classList.contains('flower__leaf')) {
+                element.style.backgroundImage = `linear-gradient(to top, rgba(255, 255, 255, 0.4), ${newColor})`;
+            }
+            element.style.transition = 'all 0.5s ease';
         });
     });
   </script>
