@@ -316,9 +316,46 @@
 
   <!-- Title -->
   <h1 class="title"><span id="title"></span></h1>
+
+  <!-- Add color change script -->
+  <script>
+    const flowersContainer = document.querySelector('.flowers');
+    
+    // Array of colors to cycle through - you can modify these colors
+    const colors = [
+      '#ff0000', // red
+      '#00ff00', // green
+      '#0000ff', // blue
+      '#ffff00', // yellow
+      '#ff00ff', // magenta
+      '#00ffff'  // cyan
+    ];
+    
+    let currentColorIndex = 0;
+
+    flowersContainer.addEventListener('click', () => {
+      currentColorIndex = (currentColorIndex + 1) % colors.length;
+      const newColor = colors[currentColorIndex];
+      
+      // Select all flower elements and change their color
+      const flowerElements = document.querySelectorAll('.flower__leaf');
+      flowerElements.forEach(flower => {
+        flower.style.backgroundColor = newColor;
+        // Add transition for smooth color change
+        flower.style.transition = 'background-color 0.5s ease';
+      });
+      
+      // Change the color of flower lights with transition
+      const flowerLights = document.querySelectorAll('.flower__light');
+      flowerLights.forEach(light => {
+        light.style.backgroundColor = newColor;
+        light.style.transition = 'background-color 0.5s ease';
+      });
+    });
+  </script>
+
+  <!-- Import Javascript -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>
-
-<!-- Import Javascript -->
-<script src="js/main.js"></script>
